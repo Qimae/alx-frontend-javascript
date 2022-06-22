@@ -1,3 +1,3 @@
-# 0x04-TypeScript
+# Typescript
 
-Typescript codes
+Javascript code in Typescript
