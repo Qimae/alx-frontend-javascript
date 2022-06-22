@@ -66,7 +66,21 @@ const executeWork = (employee: Teacher | Director): string => {
   isDirector(employee) ? res = (employee as Director).workDirectorTasks() : res = (employee as Teacher).workTeacherTasks();
   return res;
 };
-executeWork(createEmployee(200));
+console.log(executeWork(createEmployee(200)));
+console.log(executeWork(createEmployee(1000)));
 
-executeWork(createEmployee(1000));
 
+/* string literals */
+type Subjects = 'Math' | 'History';
+
+function teachClass (todayClass: string) {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  }
+  else {
+    return 'Teaching History';
+  }    
+}
+
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
