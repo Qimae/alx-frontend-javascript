@@ -69,3 +69,10 @@ class StudentClass implements studentClassInterface {
     return this.firstName;
   }
 }
+/* create student */
+function createStudent(crStudent: constructorInterface, firstName: string, lastName: string):studentClassInterface {
+  return new crStudent(firstName, lastName);
+}
+
+const student1 = createStudent(StudentClass, 'Randy', 'Orton');
+console.log(student1);
