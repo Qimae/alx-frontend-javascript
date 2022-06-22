@@ -56,3 +56,17 @@ console.log(createEmployee(200));
 console.log(createEmployee(1000));
 
 console.log(createEmployee('$500'));
+
+/* isDirector function */
+const isDirector = (employee: Teacher | Director): boolean => employee instanceof Director;
+
+/* executeWork function */
+const executeWork = (employee: Teacher | Director): string => {
+  let res;
+  isDirector(employee) ? res = (employee as Director).workDirectorTasks() : res = (employee as Teacher).workTeacherTasks();
+  return res;
+};
+executeWork(createEmployee(200));
+
+executeWork(createEmployee(1000));
+
